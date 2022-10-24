@@ -21,8 +21,8 @@ public class Trabalho {
 			lista.adiciona(aluno);
 		}
 		
-		Aluno a1 = (Aluno) lista.pega(0); //define nome do objeto tipo Aluno do Vetor (lista) na posição 0
-		a1.setNome("Jose Teste");
+		Aluno aluno1 = (Aluno) lista.pega(0); //define nome do objeto tipo Aluno do Vetor (lista) na posição 0
+		aluno1.setNome("Jose Teste");
 		
 		lista.tamanho();
 		
