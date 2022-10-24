@@ -13,10 +13,12 @@ public class Trabalho {
 		List<Aluno> listaVector = new Vector<>();
 		ArrayList<Aluno> listaArrayList = new ArrayList<Aluno>();		
 
+		double quantidade = 1000; //seta quantidade de alunos em cada vetor 
+		
 		System.out.println("---------------------------");
 		lista.tamanho();
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < quantidade; i++) {
 			Aluno aluno = new Aluno();
 			lista.adiciona(aluno);
 		}
@@ -33,7 +35,7 @@ public class Trabalho {
 		
 		novaLista.tamanho();
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < quantidade; i++) {
 			novaLista.adiciona(lista.pega(i));
 		}
 		
@@ -45,7 +47,7 @@ public class Trabalho {
 	
 		System.out.printf("\nO tamanho do vector e: %s\n", listaVector.size());
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < quantidade; i++) {
 			Aluno aluno = (Aluno) novaLista.pega(i);
 			listaVector.add(aluno);
 		}
@@ -60,7 +62,7 @@ public class Trabalho {
 		
 		System.out.printf("O tamanho do ArrayList e: %s", listaArrayList.size());
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < quantidade; i++) {
 			Aluno aluno = (Aluno) listaVector.get(i);
 			listaArrayList.add(aluno);
 		}
