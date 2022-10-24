@@ -3,11 +3,12 @@ package br.com.caelum.ed.vetores;
 public class Vetor4 {
 
 	private Object [] objetos = new Object[100];
-	private Aluno [] alunos = new Aluno [100000];
+	private Aluno [] alunos = new Aluno [10000];
 	
 	private int totalDeObjetos = 0;
 	
 	public void adiciona(Aluno aluno) {
+		this.garantaEspaco();
 		for (int i = 0; i < this.alunos.length; i++) {
 			if (this.alunos[i] == null) {
 				this.alunos[i] = aluno;
@@ -34,15 +35,12 @@ public class Vetor4 {
 		this.totalDeObjetos++;
 	}
 	
-	private boolean posicaoOcupada(int posicao) {
-		return posicao >= 0 && posicao < this.totalDeObjetos;
-	}
+//	private boolean posicaoOcupada(int posicao) {
+//		return posicao >= 0 && posicao < this.totalDeObjetos;
+//	}
 	
 	public Object pega (int posicao) {
-		if (!this.posicaoOcupada(posicao)) { //verifica se a posicao informada é falsa
-			throw new IllegalArgumentException("Posição Inválida"); //se false, retorna exceção
-		}
-		return this.objetos[posicao];
+		return this.alunos[posicao];
 	}
 	
 	public void remove (int posicao) {
@@ -94,9 +92,9 @@ public class Vetor4 {
 	
 	private void garantaEspaco() {
 		if (this.totalDeObjetos == this.objetos.length) {
-			Object [] novaArray = new Object[this.objetos.length*2];
-			for (int i = 0; i < this.objetos.length; i++) {
-				novaArray[i] = this.objetos[i];
+			Aluno [] novaArray = new Aluno[this.objetos.length*2];
+			for (int i = 0; i < this.alunos.length; i++) {
+				novaArray[i] = this.alunos[i];
 			}
 			this.objetos = novaArray;
 		}
