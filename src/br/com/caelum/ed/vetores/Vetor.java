@@ -62,8 +62,8 @@ public class Vetor {
 		return false;
 	}
 	
-	public void tamanho () {
-		System.out.printf("O tamanho da lista e: %s\n", this.totalDeObjetos);
+	public Object tamanho () {
+		return System.out.printf("O tamanho da lista e: %s\n", this.totalDeObjetos);
 	}
 	
 	public String toString() {
@@ -92,5 +92,11 @@ public class Vetor {
 			}
 			this.objetos = novaArray;
 		}
+	}
+	
+	public void escreva (String texto, Object var) {
+		System.out.printf("----------------------------------------------\n"
+				+texto
+				+"\n----------------------------------------------\n", var);
 	}
 }
