@@ -9,7 +9,7 @@ JDK ou JRE 15+
 
 ###Como iniciar os testes
 ```shell
-java "NomeDaClasse".java 
+java NomeDaClasse.java 
 ```
 
 ## Licença
